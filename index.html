@@ -337,6 +337,25 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+// Dari contact form google sheet balik lagi di website
+window.addEventListener("load", function() {
+  const scriptURL = '<YOUR SCRIPT URL>'
+  const form = document.getElementById('id of your form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch(scriptURL, {
+      method: 'POST',
+      body: data,
+      mode: 'no-cors', // unsure if this is needed since access changed to anyone
+    })
+    .then(() => {
+    window.top.location.href = 'your page url';
+    })
+  });
+});
+  
 </script>
 
 </body>
