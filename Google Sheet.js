@@ -1,6 +1,6 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbz4C1V8P1osIceOHa9s7GylSUShquuloJFgE3O7jYU5/dev'
 
-const form = document.forms['data']
+const form = document.forms['contact-form']
 
 form.addEventListener('submit', e => {
   e.preventDefault()
